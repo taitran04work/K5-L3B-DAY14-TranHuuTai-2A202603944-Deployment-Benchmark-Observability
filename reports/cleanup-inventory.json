@@ -1,0 +1,165 @@
+{
+  "captured_at": "2026-11-26T16:02:21.568850+00:00",
+  "owned": [
+    {
+      "ID": "6d75d727698e",
+      "Names": "k5-day14-observability-agent-2",
+      "State": "running",
+      "Ports": "8000/tcp"
+    },
+    {
+      "ID": "ee0b4e527f5d",
+      "Names": "k5-day14-observability-agent-3",
+      "State": "running",
+      "Ports": "8000/tcp"
+    },
+    {
+      "ID": "a3b59626606e",
+      "Names": "k5-day14-observability-agent-1",
+      "State": "running",
+      "Ports": "8000/tcp"
+    },
+    {
+      "ID": "504d72d1df48",
+      "Names": "day14-scale-3-verified",
+      "State": "exited",
+      "Ports": ""
+    },
+    {
+      "ID": "ee7c2eb0b06e",
+      "Names": "day14-scale-1-verified",
+      "State": "exited",
+      "Ports": ""
+    },
+    {
+      "ID": "7413cf2a8f8d",
+      "Names": "day14-scale-1",
+      "State": "exited",
+      "Ports": ""
+    },
+    {
+      "ID": "beac1a1a9a8f",
+      "Names": "day14-alert-unit-tests",
+      "State": "exited",
+      "Ports": ""
+    },
+    {
+      "ID": "4ec8bde34c29",
+      "Names": "k5-day14-observability-locust-1",
+      "State": "running",
+      "Ports": "0.0.0.0:8089->8089/tcp, [::]:8089->8089/tcp"
+    },
+    {
+      "ID": "c31e2eb0cc2f",
+      "Names": "k5-day14-observability-nginx-1",
+      "State": "running",
+      "Ports": "127.0.0.1:18080->80/tcp"
+    },
+    {
+      "ID": "cc31044032d5",
+      "Names": "k5-day14-observability-grafana-1",
+      "State": "running",
+      "Ports": "0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp"
+    },
+    {
+      "ID": "eba5c78449f8",
+      "Names": "k5-day14-observability-jaeger-1",
+      "State": "running",
+      "Ports": "0.0.0.0:4318->4318/tcp, [::]:4318->4318/tcp, 0.0.0.0:16686->16686/tcp, [::]:16686->16686/tcp"
+    },
+    {
+      "ID": "f40dc36babb1",
+      "Names": "k5-day14-observability-prometheus-1",
+      "State": "running",
+      "Ports": "0.0.0.0:9090->9090/tcp, [::]:9090->9090/tcp"
+    },
+    {
+      "ID": "e1d112fb760f",
+      "Names": "k5-day14-docker-nginx-1",
+      "State": "running",
+      "Ports": "127.0.0.1:18022->80/tcp"
+    },
+    {
+      "ID": "566c27822be3",
+      "Names": "k5-day14-docker-agent-1",
+      "State": "running",
+      "Ports": "8000/tcp"
+    },
+    {
+      "ID": "997e6877f5eb",
+      "Names": "k5-day14-docker-qdrant-1",
+      "State": "running",
+      "Ports": "6333-6334/tcp"
+    },
+    {
+      "ID": "c023542185df",
+      "Names": "k5-day14-docker-redis-1",
+      "State": "running",
+      "Ports": "6379/tcp"
+    },
+    {
+      "ID": "2e2c38c89c1d",
+      "Names": "k5-day14-scaling-nginx-1",
+      "State": "running",
+      "Ports": "0.0.0.0:8080->80/tcp, [::]:8080->80/tcp"
+    },
+    {
+      "ID": "efc74b7384fb",
+      "Names": "k5-day14-scaling-agent-1",
+      "State": "running",
+      "Ports": "8000/tcp"
+    },
+    {
+      "ID": "3c603e85b6e0",
+      "Names": "k5-day14-scaling-agent-2",
+      "State": "running",
+      "Ports": "8000/tcp"
+    },
+    {
+      "ID": "1e51a3c76b06",
+      "Names": "k5-day14-scaling-agent-3",
+      "State": "running",
+      "Ports": "8000/tcp"
+    },
+    {
+      "ID": "e5257eba2148",
+      "Names": "k5-day14-scaling-redis-1",
+      "State": "running",
+      "Ports": "6379/tcp"
+    },
+    {
+      "ID": "4bc701c5a9b7",
+      "Names": "day14-part2-production",
+      "State": "running",
+      "Ports": "127.0.0.1:18021->8000/tcp"
+    },
+    {
+      "ID": "eb473639e5ac",
+      "Names": "day14-part2-develop",
+      "State": "running",
+      "Ports": "127.0.0.1:18020->8000/tcp"
+    },
+    {
+      "ID": "66c3770b7ca3",
+      "Names": "day14-full-check",
+      "State": "exited",
+      "Ports": ""
+    },
+    {
+      "ID": "a16308df16bd",
+      "Names": "day14-hostnet-probe",
+      "State": "exited",
+      "Ports": ""
+    },
+    {
+      "ID": "fd90f9719cbe",
+      "Names": "day14-test-redis",
+      "State": "running",
+      "Ports": "127.0.0.1:16379->6379/tcp"
+    }
+  ],
+  "running_count": 20,
+  "locust_load_stopped": true,
+  "fault_defaults_restored": true,
+  "cleanup_policy": "docker compose down denied; no bypass attempted"
+}

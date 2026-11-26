@@ -1,0 +1,5 @@
+# Port 80 is reserved on this Windows host; preserve the lab stack itself.
+services:
+  nginx:
+    ports: !override
+      - "127.0.0.1:18022:80"

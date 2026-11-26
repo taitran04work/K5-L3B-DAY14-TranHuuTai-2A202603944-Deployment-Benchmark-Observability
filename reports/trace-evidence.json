@@ -1,0 +1,78 @@
+{
+  "captured_at": "2026-11-26T15:45:10.730314+00:00",
+  "slow_candidates": 200,
+  "error_candidates": 200,
+  "slow": {
+    "trace_id": "d61c7f17ee042fdcdbb90a064576ba6e",
+    "root_ms": 1753.533753,
+    "llm_ms": 1677.801577,
+    "llm_span": "chat mock-llm-small",
+    "llm_fraction": 0.956811680487795,
+    "logs": [
+      {
+        "ts": "2026-11-26T15:42:45.834822+00:00",
+        "level": "INFO",
+        "service": "observable-agent",
+        "instance": "6b7a979671fa",
+        "event": "llm_call",
+        "trace_id": "d61c7f17ee042fdcdbb90a064576ba6e",
+        "span_id": "997e5bb0968df57e",
+        "request_id": "a5c01dae3fa2",
+        "model": "mock-llm-small",
+        "agent_version": "v2",
+        "input_tokens": 74,
+        "output_tokens": 37,
+        "cost_usd": 3.3e-05,
+        "llm_ms": 1678.3
+      },
+      {
+        "ts": "2026-11-26T15:42:45.835073+00:00",
+        "level": "INFO",
+        "service": "observable-agent",
+        "instance": "6b7a979671fa",
+        "event": "http_request",
+        "trace_id": "d61c7f17ee042fdcdbb90a064576ba6e",
+        "span_id": "997e5bb0968df57e",
+        "request_id": "a5c01dae3fa2",
+        "method": "POST",
+        "route": "/ask",
+        "status": 200,
+        "ms": 1753.2
+      }
+    ]
+  },
+  "error": {
+    "trace_id": "99ea639c53e3ec6f704ce9bc735a975b",
+    "root_ms": 98.08645200000001,
+    "llm_ms": 73.670864,
+    "llm_span": "chat mock-llm-small",
+    "llm_fraction": 0.7510809341946633,
+    "logs": [
+      {
+        "ts": "2026-11-26T15:43:06.333063+00:00",
+        "level": "INFO",
+        "service": "observable-agent",
+        "instance": "6b7a979671fa",
+        "event": "llm_error",
+        "trace_id": "99ea639c53e3ec6f704ce9bc735a975b",
+        "span_id": "b5e6a154b7ea7002",
+        "request_id": "240695003afe",
+        "error": "Upstream LLM error: 503 Service Unavailable (mock)"
+      },
+      {
+        "ts": "2026-11-26T15:43:06.333236+00:00",
+        "level": "INFO",
+        "service": "observable-agent",
+        "instance": "6b7a979671fa",
+        "event": "http_request",
+        "trace_id": "99ea639c53e3ec6f704ce9bc735a975b",
+        "span_id": "b5e6a154b7ea7002",
+        "request_id": "240695003afe",
+        "method": "POST",
+        "route": "/ask",
+        "status": 503,
+        "ms": 97.8
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "command": [
+      "load_test.py",
+      "--url",
+      "http://localhost:8002",
+      "--requests",
+      "300",
+      "--concurrency",
+      "20",
+      "--out",
+      "reports/load_v2_slow_0.03.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "load_test.py",
+      "--url",
+      "http://localhost:8002",
+      "--requests",
+      "300",
+      "--concurrency",
+      "20",
+      "--out",
+      "reports/load_v2_slow_0.1.json"
+    ],
+    "exit_code": 1
+  }
+]

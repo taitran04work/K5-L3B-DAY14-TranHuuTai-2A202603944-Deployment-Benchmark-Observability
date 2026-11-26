@@ -1,0 +1,29 @@
+{
+  "traceID": "d61c7f17ee042fdcdbb90a064576ba6e",
+  "spans": [
+    {
+      "operationName": "agent.retrieve_context",
+      "duration": 74439.467,
+      "logs": [],
+      "status": {}
+    },
+    {
+      "operationName": "chat mock-llm-small",
+      "duration": 1677801.577,
+      "logs": [],
+      "status": {}
+    },
+    {
+      "operationName": "agent.run",
+      "duration": 1752380.922,
+      "logs": [],
+      "status": {}
+    },
+    {
+      "operationName": "POST /ask",
+      "duration": 1753533.753,
+      "logs": [],
+      "status": {}
+    }
+  ]
+}

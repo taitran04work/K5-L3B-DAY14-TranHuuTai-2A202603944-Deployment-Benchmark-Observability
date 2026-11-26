@@ -1,0 +1,163 @@
+{
+  "captured_at": "2026-11-26T15:50:43.902338+00:00",
+  "window": "1m",
+  "queries": {
+    "rps": {
+      "promql": "sum(rate(http_requests_total{job=\"agent\",route=\"/ask\"}[1m]))",
+      "response": {
+        "status": "success",
+        "data": {
+          "resultType": "vector",
+          "result": [
+            {
+              "metric": {},
+              "value": [
+                1795708243.912,
+                "15.800768964185302"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "p95_seconds": {
+      "promql": "histogram_quantile(0.95,sum by(le)(rate(http_request_duration_seconds_bucket{job=\"agent\",route=\"/ask\"}[1m])))",
+      "response": {
+        "status": "success",
+        "data": {
+          "resultType": "vector",
+          "result": [
+            {
+              "metric": {},
+              "value": [
+                1795708243.915,
+                "1.8850529223838386"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "avg_seconds": {
+      "promql": "sum(rate(http_request_duration_seconds_sum{job=\"agent\",route=\"/ask\"}[1m])) / sum(rate(http_request_duration_seconds_count{job=\"agent\",route=\"/ask\"}[1m]))",
+      "response": {
+        "status": "success",
+        "data": {
+          "resultType": "vector",
+          "result": [
+            {
+              "metric": {},
+              "value": [
+                1795708243.917,
+                "0.5479268494110414"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "error_rate": {
+      "promql": "sum(rate(http_requests_total{job=\"agent\",route=\"/ask\",status=~\"5..\"}[1m])) / sum(rate(http_requests_total{job=\"agent\",route=\"/ask\"}[1m]))",
+      "response": {
+        "status": "success",
+        "data": {
+          "resultType": "vector",
+          "result": [
+            {
+              "metric": {},
+              "value": [
+                1795708243.918,
+                "0.2094361303807352"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "per_instance": {
+      "promql": "sum by(instance)(rate(http_requests_total{job=\"agent\",route=\"/ask\"}[1m]))",
+      "response": {
+        "status": "success",
+        "data": {
+          "resultType": "vector",
+          "result": [
+            {
+              "metric": {
+                "instance": "172.25.0.5:8000"
+              },
+              "value": [
+                1795708243.919,
+                "5.29119770169282"
+              ]
+            },
+            {
+              "metric": {
+                "instance": "172.25.0.8:8000"
+              },
+              "value": [
+                1795708243.919,
+                "5.400294561521537"
+              ]
+            },
+            {
+              "metric": {
+                "instance": "172.25.0.9:8000"
+              },
+              "value": [
+                1795708243.919,
+                "5.109276700970945"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "tokens_per_second": {
+      "promql": "sum by(type)(rate(llm_tokens_total{job=\"agent\"}[1m]))",
+      "response": {
+        "status": "success",
+        "data": {
+          "resultType": "vector",
+          "result": [
+            {
+              "metric": {
+                "type": "input"
+              },
+              "value": [
+                1795708243.92,
+                "967.4471005447824"
+              ]
+            },
+            {
+              "metric": {
+                "type": "output"
+              },
+              "value": [
+                1795708243.92,
+                "504.47911528258777"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "instances_up": {
+      "promql": "sum(up{job=\"agent\"})",
+      "response": {
+        "status": "success",
+        "data": {
+          "resultType": "vector",
+          "result": [
+            {
+              "metric": {},
+              "value": [
+                1795708243.921,
+                "3"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

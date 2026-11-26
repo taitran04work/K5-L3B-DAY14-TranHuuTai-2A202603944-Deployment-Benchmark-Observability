@@ -1,0 +1,28 @@
+[
+  {
+    "command": [
+      "eval/run_eval.py",
+      "--url",
+      "http://localhost:8002",
+      "--min-accuracy",
+      "1.0",
+      "--baseline",
+      "reports/eval_v2.json",
+      "--out",
+      "reports/eval_v2_fixed.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "eval/run_eval.py",
+      "--url",
+      "http://localhost:8001",
+      "--baseline",
+      "reports/eval_v2.json",
+      "--out",
+      "reports/eval_regression.json"
+    ],
+    "exit_code": 1
+  }
+]

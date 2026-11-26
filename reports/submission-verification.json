@@ -1,0 +1,58 @@
+{
+  "verified_at": "2026-11-26T16:02:21.568850+00:00",
+  "numeric_rows_verified": 15,
+  "grader_pass_12_of_12": true,
+  "fixed_eval_pass_23_of_23": true,
+  "screenshots": [
+    {
+      "path": "screenshots\\grafana-dashboard.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "20ce38c36532bb50261417f9162096b581d68ad8215ca0f0b8ee581efb4f96b8"
+    },
+    {
+      "path": "screenshots\\grafana-dashboard-1280.png",
+      "width": 1280,
+      "height": 1000,
+      "sha256": "c71082fe89c722ed0fedffcd9680bfe362fbda5ba4ccde72bc95cfea8786db9f"
+    },
+    {
+      "path": "screenshots\\jaeger-slow-trace.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "f6b9659f654398b317ac3d077a99436324551c329384c69f5a90a132f494cd52"
+    },
+    {
+      "path": "screenshots\\jaeger-slow-trace-1280.png",
+      "width": 1280,
+      "height": 1000,
+      "sha256": "7abf7413370a865cd39377200bdfb6842332239bf1d2120ef49d93eceaaccacd"
+    },
+    {
+      "path": "screenshots\\jaeger-error-trace.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "a7fc0fdf706f12ce784a933d079d70f07ed3904951cb6a2f46e07dcebc01aab5"
+    },
+    {
+      "path": "screenshots\\jaeger-error-trace-1280.png",
+      "width": 1280,
+      "height": 1000,
+      "sha256": "3f625eb6b95aa446811d7cdb3424e5fc7bcfce672b2c7039477b9b638884ca5c"
+    },
+    {
+      "path": "screenshots\\prometheus-alert-firing.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "da0691cd2b2cad57e8b04ea31a99f4a31a3f5629491bbc612361f5fa7d3468b1"
+    },
+    {
+      "path": "screenshots\\prometheus-alert-firing-1280.png",
+      "width": 1280,
+      "height": 1000,
+      "sha256": "e8c1f712550d8ee0f24adacba9d505ecfc8aa1b28f049bb0345e71720ab9ad2b"
+    }
+  ],
+  "email_findings": [],
+  "cleanup_pending_containers": 20
+}

@@ -1,0 +1,99 @@
+{
+  "traceID": "99ea639c53e3ec6f704ce9bc735a975b",
+  "spans": [
+    {
+      "operationName": "agent.retrieve_context",
+      "duration": 23102.297,
+      "logs": [],
+      "status": {}
+    },
+    {
+      "operationName": "chat mock-llm-small",
+      "duration": 73670.864,
+      "logs": [
+        {
+          "timeUnixNano": "1795707786332829765",
+          "name": "exception",
+          "attributes": [
+            {
+              "key": "exception.escaped",
+              "value": {
+                "stringValue": "False"
+              }
+            },
+            {
+              "key": "exception.message",
+              "value": {
+                "stringValue": "Upstream LLM error: 503 Service Unavailable (mock)"
+              }
+            },
+            {
+              "key": "exception.stacktrace",
+              "value": {
+                "stringValue": "Traceback (most recent call last):\n  File \"/app/app/main.py\", line 153, in run_agent\n    result = await mock_llm.generate(question, context=context,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/utils/mock_llm.py\", line 205, in generate\n    raise LLMError(\"Upstream LLM error: 503 Service Unavailable (mock)\")\nutils.mock_llm.LLMError: Upstream LLM error: 503 Service Unavailable (mock)\n"
+              }
+            },
+            {
+              "key": "exception.type",
+              "value": {
+                "stringValue": "utils.mock_llm.LLMError"
+              }
+            }
+          ]
+        }
+      ],
+      "status": {
+        "message": "LLMError: Upstream LLM error: 503 Service Unavailable (mock)",
+        "code": 2
+      }
+    },
+    {
+      "operationName": "agent.run",
+      "duration": 97044.358,
+      "logs": [
+        {
+          "timeUnixNano": "1795707786333026900",
+          "name": "exception",
+          "attributes": [
+            {
+              "key": "exception.escaped",
+              "value": {
+                "stringValue": "False"
+              }
+            },
+            {
+              "key": "exception.message",
+              "value": {
+                "stringValue": "Upstream LLM error: 503 Service Unavailable (mock)"
+              }
+            },
+            {
+              "key": "exception.stacktrace",
+              "value": {
+                "stringValue": "Traceback (most recent call last):\n  File \"/home/agent/.local/lib/python3.11/site-packages/opentelemetry/trace/__init__.py\", line 602, in use_span\n    yield span\n  File \"/home/agent/.local/lib/python3.11/site-packages/opentelemetry/sdk/trace/__init__.py\", line 1136, in start_as_current_span\n    yield span\n  File \"/home/agent/.local/lib/python3.11/site-packages/opentelemetry/trace/__init__.py\", line 441, in start_as_current_span\n    yield span\n  File \"/app/app/main.py\", line 153, in run_agent\n    result = await mock_llm.generate(question, context=context,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/utils/mock_llm.py\", line 205, in generate\n    raise LLMError(\"Upstream LLM error: 503 Service Unavailable (mock)\")\nutils.mock_llm.LLMError: Upstream LLM error: 503 Service Unavailable (mock)\n"
+              }
+            },
+            {
+              "key": "exception.type",
+              "value": {
+                "stringValue": "utils.mock_llm.LLMError"
+              }
+            }
+          ]
+        }
+      ],
+      "status": {
+        "message": "LLMError: Upstream LLM error: 503 Service Unavailable (mock)",
+        "code": 2
+      }
+    },
+    {
+      "operationName": "POST /ask",
+      "duration": 98086.452,
+      "logs": [],
+      "status": {
+        "code": 2
+      }
+    }
+  ]
+}

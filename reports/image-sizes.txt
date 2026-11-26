@@ -1,0 +1,3 @@
+REPOSITORY   TAG        SIZE
+my-agent     advanced   240MB
+my-agent     develop    1.67GB

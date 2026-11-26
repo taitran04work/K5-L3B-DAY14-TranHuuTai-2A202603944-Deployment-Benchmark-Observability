@@ -1,0 +1,5 @@
+# Isolate from Part 5, whose port 8080 remains owned by its stack.
+services:
+  nginx:
+    ports: !override
+      - "127.0.0.1:18080:80"

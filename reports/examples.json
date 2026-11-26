@@ -1,0 +1,74 @@
+{
+  "part1_develop": {
+    "status": 200,
+    "body": {
+      "answer": "Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé."
+    }
+  },
+  "part1_develop_json": {
+    "status": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "missing",
+          "loc": [
+            "query",
+            "question"
+          ],
+          "msg": "Field required",
+          "input": null
+        }
+      ]
+    }
+  },
+  "part1_production": {
+    "status": 200,
+    "body": {
+      "question": "Hello",
+      "answer": "Tôi là AI agent được deploy lên cloud. Câu hỏi của bạn đã được nhận.",
+      "model": "gpt-4o-mini"
+    }
+  },
+  "part1_health": {
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "uptime_seconds": 0.7,
+      "version": "1.0.0",
+      "environment": "development",
+      "timestamp": "2026-11-26T15:25:16.920879+00:00"
+    }
+  },
+  "part1_ready": {
+    "status": 200,
+    "body": {
+      "ready": true
+    }
+  },
+  "part4_api_key_401": "HTTP/1.1 401 Unauthorized\ndate: Thu, 26 Nov 2026 15:25:17 GMT\nserver: uvicorn\ncontent-length: 67\ncontent-type: application/json\n\n{\"detail\":\"Missing API key. Include header: X-API-Key: <your-key>\"}",
+  "part4_api_key_200": "HTTP/1.1 200 OK\ndate: Thu, 26 Nov 2026 15:25:17 GMT\nserver: uvicorn\ncontent-length: 114\ncontent-type: application/json\n\n{\"question\":\"Hello\",\"answer\":\"Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé.\"}",
+  "part4_token_status": 200,
+  "part4_jwt_statuses": [
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    429,
+    429,
+    429,
+    429,
+    429,
+    429,
+    429,
+    429,
+    429,
+    429
+  ],
+  "part4_jwt_429": "HTTP/1.1 429 Too Many Requests\ndate: Thu, 26 Nov 2026 15:25:19 GMT\nserver: uvicorn\nx-ratelimit-limit: 10\nx-ratelimit-remaining: 0\nx-ratelimit-reset: 1795706779\nretry-after: 59\ncontent-length: 98\ncontent-type: application/json\nx-content-type-options: nosniff\nx-frame-options: DENY\nx-xss-protection: 1; mode=block\nreferrer-policy: strict-origin-when-cross-origin\n\n{\"detail\":{\"error\":\"Rate limit exceeded\",\"limit\":10,\"window_seconds\":60,\"retry_after_seconds\":59}}"
+}

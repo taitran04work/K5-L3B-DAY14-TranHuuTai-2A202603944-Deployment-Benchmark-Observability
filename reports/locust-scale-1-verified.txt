@@ -1,0 +1,31 @@
+time="2026-11-26T22:38:37+07:00" level=warning msg="Found orphan containers ([day14-scale-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container day14-scale-1-verified Creating 
+ Container day14-scale-1-verified Created 
+[2026-11-26 15:38:37,670] ee7c2eb0b06e/INFO/locust.main: Starting Locust 2.47.0
+[2026-11-26 15:38:37,674] ee7c2eb0b06e/INFO/locust.main: Run time limit set to 120 seconds
+[2026-11-26 15:38:37,677] ee7c2eb0b06e/INFO/locust.runners: Ramping to 100 users at a rate of 10.00 per second
+[2026-11-26 15:38:46,708] ee7c2eb0b06e/INFO/locust.runners: All users spawned: {"AgentUser": 100} (100 total users)
+[2026-11-26 15:40:37,484] ee7c2eb0b06e/INFO/locust.main: --run-time limit reached, shutting down
+[2026-11-26 15:40:37,498] ee7c2eb0b06e/INFO/locust.main: Shutting down (exit code 1)
+Type     Name                                                                          # reqs      # fails |    Avg     Min     Max    Med |   req/s  failures/s
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+POST     /ask                                                                            7172    63(0.88%) |    229      89    1741    190 |   59.86        0.53
+GET      /health                                                                          744     0(0.00%) |      2       0      62      2 |    6.21        0.00
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+         Aggregated                                                                      7916    63(0.80%) |    208       0    1741    190 |   66.07        0.53
+
+Response time percentiles (approximated)
+Type     Name                                                                                  50%    66%    75%    80%    90%    95%    98%    99%  99.9% 99.99%   100% # reqs
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+POST     /ask                                                                                  190    200    210    210    220    220   1700   1700   1700   1700   1700   7172
+GET      /health                                                                                 2      2      2      2      3      3      8     11     63     63     63    744
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+         Aggregated                                                                            190    200    200    210    210    220   1700   1700   1700   1700   1700   7916
+
+Error report
+# occurrences      Error                                                                                               
+------------------|---------------------------------------------------------------------------------------------------------------------------------------------
+63                 POST /ask: HTTPError('503 Server Error: Service Unavailable for url: /ask')                         
+------------------|---------------------------------------------------------------------------------------------------------------------------------------------
+
+

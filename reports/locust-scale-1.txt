@@ -1,0 +1,37 @@
+ Container k5-day14-observability-jaeger-1 Running 
+ Container k5-day14-observability-agent-1 Running 
+ Container k5-day14-observability-agent-2 Creating 
+ Container k5-day14-observability-agent-2 Created 
+ Container k5-day14-observability-nginx-1 Running 
+ Container k5-day14-observability-agent-2 Starting 
+ Container k5-day14-observability-agent-2 Started 
+ Container day14-scale-1 Creating 
+ Container day14-scale-1 Created 
+[2026-11-26 15:35:15,121] 7413cf2a8f8d/INFO/locust.main: Starting Locust 2.47.0
+[2026-11-26 15:35:15,125] 7413cf2a8f8d/INFO/locust.main: Run time limit set to 120 seconds
+[2026-11-26 15:35:15,128] 7413cf2a8f8d/INFO/locust.runners: Ramping to 100 users at a rate of 10.00 per second
+[2026-11-26 15:35:24,155] 7413cf2a8f8d/INFO/locust.runners: All users spawned: {"AgentUser": 100} (100 total users)
+[2026-11-26 15:37:14,859] 7413cf2a8f8d/INFO/locust.main: --run-time limit reached, shutting down
+[2026-11-26 15:37:14,880] 7413cf2a8f8d/INFO/locust.main: Shutting down (exit code 1)
+Type     Name                                                                          # reqs      # fails |    Avg     Min     Max    Med |   req/s  failures/s
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+POST     /ask                                                                            7187    95(1.32%) |    232      87    1765    190 |   60.02        0.79
+GET      /health                                                                          734     0(0.00%) |      2       1      62      2 |    6.13        0.00
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+         Aggregated                                                                      7921    95(1.20%) |    211       1    1765    190 |   66.15        0.79
+
+Response time percentiles (approximated)
+Type     Name                                                                                  50%    66%    75%    80%    90%    95%    98%    99%  99.9% 99.99%   100% # reqs
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+POST     /ask                                                                                  190    200    210    210    220    220   1700   1700   1700   1800   1800   7187
+GET      /health                                                                                 2      2      2      2      3      3      7     21     62     62     62    734
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+         Aggregated                                                                            190    200    200    210    220    220   1700   1700   1700   1800   1800   7921
+
+Error report
+# occurrences      Error                                                                                               
+------------------|---------------------------------------------------------------------------------------------------------------------------------------------
+95                 POST /ask: HTTPError('503 Server Error: Service Unavailable for url: /ask')                         
+------------------|---------------------------------------------------------------------------------------------------------------------------------------------
+
+
